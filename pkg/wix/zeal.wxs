@@ -8,10 +8,6 @@
     <?error AppPackageDir must be set ?>
 <?endif?>
 
-<?ifndef CompressionLevel ?>
-    <?define CompressionLevel="high" ?>
-<?endif?>
-
 <?define AppName="Zeal" ?>
 <?define AppManufacturer="Oleg Shparber" ?>
 <?define AppExeName="zeal.exe" ?>
@@ -43,7 +39,7 @@
               OnlyDetect="yes" Property="CURRENTVERSIONDETECTED" />
         </Upgrade>
 
-        <MediaTemplate CompressionLevel="$(var.CompressionLevel)" EmbedCab="yes" />
+        <MediaTemplate CompressionLevel="high" EmbedCab="yes" />
 
         <Icon Id="$(var.AppExeName)" SourceFile="$(var.AppPackageDir)\$(var.AppExeName)" />
         <Property Id="ARPPRODUCTICON" Value="$(var.AppExeName)" />
