@@ -59,9 +59,6 @@ void Extractor::extract(const QString &sourceFile, const QString &destination, c
         destinationDir.setPath(destinationDir.filePath(root));
     }
 
-    // Destination directory must be created before any other files.
-    destinationDir.mkpath(QLatin1String("."));
-
     // TODO: Do not strip root directory in archive if it equals to 'root'
     archive_entry *entry;
     while (archive_read_next_header(info.archiveHandle, &entry) == ARCHIVE_OK) {
